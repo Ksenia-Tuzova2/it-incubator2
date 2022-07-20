@@ -51,6 +51,9 @@
     border-style: solid;
  border-radius:50%;
   }
+	 .silver-background{
+      background-color: silver;
+  }
 </style>
 
 <h2 class="red-text">CatPhotoApp</h2>
@@ -61,7 +64,7 @@
 			src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
 			alt="A cute orange cat lying on its back."></a>
 
-	<div>
+	<div  class='silver-background'>
 		<p>Things cats love:</p>
 		<ul>
 			<li>cat nip</li>
@@ -75,7 +78,7 @@
 			<li>other cats</li>
 		</ol>
 	</div>
-	<form action="https://www.freecatphotoapp.com/submit-cat-photo">
+	<form action="https://www.freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
 		<label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
 		<label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
 		<label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
