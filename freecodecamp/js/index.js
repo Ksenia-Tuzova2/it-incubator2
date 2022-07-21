@@ -47,4 +47,24 @@ let fact = "is cool!"; // Change this line
 const FACT = "is awesome!";
 console.log(FCC, fact); // Change this line
 
-//use multiplie
+//use divide
+const quotient = 66 / 33;
+
+//use increment
+let myVar = 87;
+
+// Only change code below this line
+myVar = ++myVar;
+
+//use decrement
+let myVar = 11;
+
+// Only change code below this line
+myVar = --myVar;
+
+//use decimal -десятичные -number
+const ourDecimal = 5.7;
+
+// Only change code below this line
+
+const myDecimal = 5.7
