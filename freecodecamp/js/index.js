@@ -122,3 +122,38 @@ var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
 
 //в конце первой строки должен быть пробел
 const myStr = "This is the start ." + "This is the end."; // Change this line
+
+let myStr = "This is the first sentence. ";
+myStr += "This is the second sentence."
+
+//
+const myName = "Ksenia";
+const myStr = "My name is" + myName + 'and I am well!';
+
+//
+const someAdjective = "sasd";
+let myStr = "Learning to code is ";
+
+myStr += someAdjective
+
+//
+let lastNameLength = 0;
+const lastName = "Lovelace";
+
+// Only change code below this line
+lastNameLength = lastName.length;
+
+//length
+
+let firstLetterOfLastName = "";
+const lastName = "Lovelace";
+
+// Only change code below this line
+firstLetterOfLastName = lastName[0]; 
+
+//можно поменять строку только полностью, а не отдельные элементы
+let myStr = "Jello World";
+
+// Only change code below this line
+myStr = "Hello World"; // Change this line
+// Only change code above this line
