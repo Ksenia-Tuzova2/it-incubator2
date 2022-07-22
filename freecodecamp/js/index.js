@@ -187,3 +187,17 @@ const wordBlanks = 'A ' + myNoun + ' is ' + myAdjective + ' and it ' + myVerb + 
 
 //arrays
 const myArray = ["peanut butter", 13];
+
+//вложенный массив
+const myArray = [["Bulls", 23], ["White Sox", 45]];
+
+//копируем массив в переменную
+const myArray = [50, 60, 70];
+
+let myData = myArray[0]
+
+//меняем элемент массива
+const myArray = [18, 64, 99];
+
+// Only change code below this line
+myArray[0] = 45
