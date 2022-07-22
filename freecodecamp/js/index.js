@@ -157,3 +157,33 @@ let myStr = "Jello World";
 // Only change code below this line
 myStr = "Hello World"; // Change this line
 // Only change code above this line
+
+//
+const lastName = "Lovelace";
+
+// Only change code below this line
+const thirdLetterOfLastName = lastName[2]; // Change this line
+
+//ищем последнюю букву строки
+const lastName = "Lovelace";
+
+// Only change code below this line
+const lastLetterOfLastName = lastName[lastName.length - 1]; // Change this line
+
+//ищем с конца предпоследний символ строки
+const lastName = "Lovelace";
+
+// Only change code below this line
+const secondToLastLetterOfLastName = lastName[lastName.length - 2]; // Change this line
+
+//собираем предложение
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+
+// Only change code below this line
+const wordBlanks = 'A ' + myNoun + ' is ' + myAdjective + ' and it ' + myVerb + ' ' + myAdverb;
+
+//arrays
+const myArray = ["peanut butter", 13];
