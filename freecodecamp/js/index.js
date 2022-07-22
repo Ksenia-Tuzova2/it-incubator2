@@ -201,3 +201,101 @@ const myArray = [18, 64, 99];
 
 // Only change code below this line
 myArray[0] = 45
+
+//выбираем конкретный элемент из массива массивов
+
+const myArray = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9],
+	[[10, 11, 12], 13, 14],
+];
+
+const myData = myArray[2][1];
+
+// метод пуш проталкивает вконец 
+const myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line
+
+myArray.push(["dog", 3])
+
+//удаляем элемент и присваиваем его 
+const myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line
+let removedFromMyArray = myArray.pop()
+
+//удаляем первый элемент и присваеваем его в новую переменную
+// Setup
+const myArray = [["John", 23], ["dog", 3]];
+
+// Only change code below this line
+let removedFromMyArray = myArray.shift()
+
+//unshift добавляет в начало массива
+//ИСПОЛЬЗОВАТЬ В СВОЕМ ПРИЛОЖЕНИИ
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+
+// Only change code below this line
+
+myArray.unshift(["Paul", 35])
+
+//создаем список при помощи пуш
+const myList = [];
+
+myList.push(["Chocolate Bar", 15], ["Chocolate Bar", 15], ["Chocolate Bar", 15], ["Chocolate Bar", 15], ["Chocolate Bar", 15])
+
+//создание и вызов функции
+function reusableFunction() {
+	console.log("Hi World");
+}
+reusableFunction()
+
+//создание функции с параметры и сложение 
+function functionWithArgs(param1, param2) {
+	console.log(param1 + param2);
+}
+functionWithArgs(2, 6)
+
+//возвращаем новое значение при помощи функции
+function timesFive(num) {
+	return num * 5;
+}
+
+const answer = timesFive(5);
+
+//видимость  глобальных переменных внутри функции
+let myGlobal = 10
+
+function fun1() {
+	// Assign 5 to oopsGlobal Here
+	oopsGlobal = 5
+}
+
+
+// Only change code above this line
+
+function fun2() {
+	var output = "";
+	if (typeof myGlobal != "undefined") {
+		output += "myGlobal: " + myGlobal;
+	}
+	if (typeof oopsGlobal != "undefined") {
+		output += " oopsGlobal: " + oopsGlobal;
+	}
+	console.log(output);
+}
+
+//мы можем вызвать в параметрах внутреннюю перменную при вызове функции, но не в других функциях, например здесь в консоль лог она не будет видна, 
+function myLocalScope() {
+	// Only change code below this line
+	let myVar
+	console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+console.log('outside myLocalScope', myVar);
