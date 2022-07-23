@@ -299,3 +299,82 @@ myLocalScope();
 // Run and check the console
 // myVar is not defined outside of myLocalScope
 console.log('outside myLocalScope', myVar);
+
+//это две разных переменных
+
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+	// Only change code below this line
+	let outerWear = 'sweater'
+	// Only change code above this line
+	return outerWear;
+}
+
+myOutfit();
+console.log(outerWear)
+
+//если нет ретурна- возращаемое значение будет равно андефайнд
+let sum = 0;
+
+function addThree() {
+	sum = sum + 3;
+}
+
+// Only change code below this line
+function addFive() {
+	sum = sum + 5
+}
+
+// Only change code above this line
+
+addThree();
+addFive();
+
+//присваиваю возвращаемое значение
+
+let processed = 0;
+
+function processArg(num) {
+	return (num + 3) / 5;
+}
+
+// Only change code below this line
+processed = processArg(7) 
+
+//удаляем и добавляем элементы массива при помощи функции, потом возвращаем удаленный элемент при помощи переменной
+function nextInLine(arr, item) {
+	// Only change code below this line
+	arr.push(item)
+	let removed = arr.shift()
+	return removed;
+	// Only change code above this line
+}
+
+// Setup
+const testArr = [1, 2, 3, 4, 5];
+
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+
+//boolean type
+
+function welcomeToBooleans() {
+	// Only change code below this line
+
+	return true; // Change this line
+
+	// Only change code above this line
+}
+function testEqual(val) {
+	if (val == 12) {
+		// Change this line
+		return "Equal";
+	}
+	return "Not Equal";
+}
+// Change this value to test
+testEqual(12);
