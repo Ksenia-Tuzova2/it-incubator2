@@ -378,3 +378,82 @@ function testEqual(val) {
 }
 // Change this value to test
 testEqual(12);
+
+function testStrict(val) {
+	if (val === 7) { // Change this line
+		return "Equal";
+	}
+	return "Not Equal";
+}
+
+testStrict(10);
+
+//узнать тип данных
+
+typeof 3
+typeof '3'
+typeof 3возвращает строку numberи typeof '3'возвращает строку string.
+
+
+//изменяем функцию, когда она строго равна
+
+function compareEquality(a, b) {
+	if (a === b) { // Change this line
+		return "Equal";
+	}
+	return "Not Equal";
+}
+
+compareEquality(10, "10");
+
+//неравенство
+
+function testNotEqual(val) {
+	if (val != 99) { // Change this line
+		return "Not Equal";
+	}
+	return "Equal";
+}
+
+testNotEqual(10);
+
+//строгое неравенство
+function testStrictNotEqual(val) {
+	if (val !== 17) { // Change this line
+		return "Not Equal";
+	}
+	return "Equal";
+}
+
+testStrictNotEqual(10);
+
+//оператор больше чем
+
+function testGreaterThan(val) {
+	if (val > 100) {  // Change this line
+		return "Over 100";
+	}
+
+	if (val > 10) {  // Change this line
+		return "Over 10";
+	}
+
+	return "10 or Under";
+}
+
+testGreaterThan(10);
+
+//больше или равно
+function testGreaterOrEqual(val) {
+	if (val >= 20) {  // Change this line
+		return "20 or Over";
+	}
+
+	if (val >= 10) {  // Change this line
+		return "10 or Over";
+	}
+
+	return "Less than 10";
+}
+
+testGreaterOrEqual(10);
