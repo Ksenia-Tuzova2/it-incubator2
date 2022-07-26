@@ -538,3 +538,171 @@ function testElse(val) {
 }
 
 testElse(4);
+
+
+//
+function testElseIf(val) {
+	if (val > 10) {
+		return "Greater than 10";
+	}
+
+	else if (val < 5) {
+		return "Smaller than 5";
+	}
+	else {
+		return "Between 5 and 10";
+	}
+
+}
+
+testElseIf(7);
+
+//порядок очень важен 
+function orderMyLogic(val) {
+	if (val < 5) {
+
+		return "Less than 5";
+	} else if (val < 10) {
+		return "Less than 10";
+	} else {
+		return "Greater than or equal to 10";
+	}
+}
+
+orderMyLogic(7);
+
+//делаем цепочку
+function testSize(num) {
+	// Only change code below this line
+	if (num < 5) {
+		return 'Tiny'
+	} else if (num < 10) {
+		return 'Small'
+	}
+	else if (num < 15) {
+		return 'Medium'
+	}
+
+	else if (num < 20) {
+		return 'Large'
+	}
+	else if (num >= 20) {
+		return 'Huge'
+	}
+
+
+	return "Change Me";
+	// Only change code above this line
+}
+
+testSize(7);
+
+//
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+	// Only change code below this line
+	if (strokes == 1) {
+		return "Hole-in-one!"
+	} else if (strokes <= par - 2) {
+		return "Eagle"
+	} else if (strokes == par - 1) {
+		return "Birdie"
+	}
+	else if (strokes == par) {
+		return "Par"
+	}
+	else if (strokes == par + 1) {
+		return "Bogey"
+
+	}
+	else if (strokes == par + 2) {
+		return "Double Bogey"
+	}
+	else if (strokes >= par + 3) {
+		return "Go Home!"
+	}
+
+	return "Change Me";
+	// Only change code above this line
+}
+
+golfScore(5, 4);
+
+//switch
+function caseInSwitch(val) {
+	let answer = "";
+	// Only change code below this line
+	switch (val) {
+		case 1: answer = 'alpha';
+			break;
+		case 2: answer = 'beta';
+			break;
+		case 3: answer = 'gamma';
+			break;
+		case 4: answer = 'delta';
+			break;
+	}
+
+
+	// Only change code above this line
+	return answer;
+}
+
+console.log(caseInSwitch(1));
+
+//swithc and default
+function switchOfStuff(val) {
+	let answer = "";
+	// Only change code below this line
+
+	switch (val) {
+		case 'a':
+			answer = 'apple';
+			break;
+		case 'b':
+			answer = 'bird';
+			break;
+		case 'c':
+			answer = 'cat';
+			break;
+
+		default:
+			answer = 'stuff';
+			break;
+	}
+
+	// Only change code above this line
+	return answer;
+}
+
+switchOfStuff(1);
+
+//несколько выходов кейс 
+function sequentialSizes(val) {
+	let answer = "";
+	// Only change code below this line
+	switch (val) {
+		case 1:
+		case 2:
+		case 3:
+			answer = "Low";
+			break;
+		case 4:
+		case 5:
+		case 6:
+			answer = "Mid";
+			break;
+		case 7:
+		case 8:
+		case 9:
+			answer = "High";
+			break;
+	}
+
+
+	// Only change code above this line
+	return answer;
+}
+
+sequentialSizes(1);
