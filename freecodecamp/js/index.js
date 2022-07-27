@@ -761,6 +761,30 @@ function abTest(a, b) {
 
 abTest(2, 2);
 
+//создание массива
+const myDog = {
+	// Only change code below this line
+	name: 'Sharik',
+	legs: 4,
+	tails: 1,
+	friends: []
+
+	// Only change code above this line
+};
+
+//считываем значение 
+
+// Setup
+const testObj = {
+	"hat": "ballcap",
+	"shirt": "jersey",
+	"shoes": "cleats"
+};
+
+// Only change code below this line
+const hatValue = testObj.hat;      // Change this line
+const shirtValue = testObj.shirt;    // Change this line
+
 //codewars
 
 //wilson primes
