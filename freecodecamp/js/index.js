@@ -810,6 +810,41 @@ const testObj = {
 const playerNumber = 16;  // Change this line
 const player = testObj[playerNumber];   // Change this line
 
+//изменение какого-то конкретного параметра
+// Setup
+const myDog = {
+	"name": "Coder",
+	"legs": 4,
+	"tails": 1,
+	"friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line
+myDog.name = 'Happy Coder'
+
+//добавление новой пары
+
+const myDog = {
+	"name": "Happy Coder",
+	"legs": 4,
+	"tails": 1,
+	"friends": ["freeCodeCamp Campers"]
+};
+myDog.bark = "bow-wow";
+
+//удаляем пару из объекта
+// Setup
+const myDog = {
+	"name": "Happy Coder",
+	"legs": 4,
+	"tails": 1,
+	"friends": ["freeCodeCamp Campers"],
+	"bark": "woof"
+};
+
+// Only change code below this line
+delete myDog.tails
+
 //codewars
 
 //wilson primes
