@@ -785,6 +785,31 @@ const testObj = {
 const hatValue = testObj.hat;      // Change this line
 const shirtValue = testObj.shirt;    // Change this line
 
+//получаем значение через строку 
+
+// Setup
+const testObj = {
+	"an entree": "hamburger",
+	"my side": "veggies",
+	"the drink": "water"
+};
+
+// Only change code below this line
+const entreeValue = testObj["an entree"];   // Change this line
+const drinkValue = testObj["the drink"];    // Change this line
+
+//присваеваем новой переменной значение, а потом при помощи нее ищем что-то в объекте
+// Setup
+const testObj = {
+	12: "Namath",
+	16: "Montana",
+	19: "Unitas"
+};
+
+// Only change code below this line
+const playerNumber = 16;  // Change this line
+const player = testObj[playerNumber];   // Change this line
+
 //codewars
 
 //wilson primes
@@ -794,6 +819,21 @@ function amIWilson(p) {
 	else if (p === 13) return true
 	else if (p === 5) return true
 	else return false
+}
 
+//проверка на нан
 
+const isReallyNaN = (val) => {
+	if (val === undefined) {
+		return false
+	} else if (typeof (val) === "object") {
+		return false
+	} else if (typeof (val) === "string") {
+		return false
+	} else if (typeof (val) === "function") {
+		return false
+	} else if (isNaN(val)) {
+		return true
+	} else
+		return false
 }
