@@ -884,6 +884,30 @@ function phoneticLookup(val) {
 	return result;
 }
 
+const myPlants = [
+	{
+		type: "flowers",
+		list: [
+			"rose",
+			"tulip",
+			"dandelion"
+		]
+	},
+	{
+		type: "trees",
+		list: [
+			"fir",
+			"pine",
+			"birch"
+		]
+	}
+];
+
+const secondTree = myPlants[1].list[1];
+
+
+
+
 phoneticLookup("charlie");
 
 //codewars
