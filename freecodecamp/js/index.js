@@ -905,10 +905,90 @@ const myPlants = [
 
 const secondTree = myPlants[1].list[1];
 
-
-
-
 phoneticLookup("charlie");
+
+
+//свойство checkOwnProp(propname ) для проверки объектов на определенное свойство
+
+function checkObj(obj, checkProp) {
+	// Only change code below this line
+	if (obj.hasOwnProperty(checkProp)) {
+		return obj[checkProp]
+	} else return "Not Found";
+
+	// Only change code above this line
+}
+
+//добавляю новый объект в массив
+
+const myMusic = [
+	{
+		"artist": "Billy Joel",
+		"title": "Piano Man",
+		"release_year": 1973,
+		"formats": [
+			"CD",
+			"8T",
+			"LP"
+		],
+		"gold": true
+	}
+];
+
+myMusic.push(
+	{
+		"artist": "Billy Joel",
+		"title": "Piano Man",
+		"release_year": 1973,
+		"formats": [
+			"CD",
+			"8T",
+			"LP"
+		],
+		"gold": true
+	}
+)
+
+//получаем доступ к свойству объекта
+
+const myStorage = {
+	"car": {
+		"inside": {
+			"glove box": "maps",
+			"passenger seat": "crumbs"
+		},
+		"outside": {
+			"trunk": "jack"
+		}
+	}
+};
+
+let gloveBoxContents = undefined;
+
+gloveBoxContents = myStorage.car.inside['glove box']
+
+//получаем доступ к вложенным массивам 
+
+const myPlants = [
+	{
+		type: "flowers",
+		list: [
+			"rose",
+			"tulip",
+			"dandelion"
+		]
+	},
+	{
+		type: "trees",
+		list: [
+			"fir",
+			"pine",
+			"birch"
+		]
+	}
+];
+
+const secondTree = myPlants[1].list[1];
 
 //codewars
 
