@@ -1039,3 +1039,69 @@ function sameCase(a, b) {
 		return 0
 	}
 }
+
+//за последние 2 дня
+
+// цикл вайли выполняется пока условие соблюдается 
+const myArray = [];
+let i = 5;
+
+while (i >= 0) {
+	myArray.push(i);
+	i--;
+}
+// Only change code below this line
+
+
+//цикл фор 
+
+const myArray = [];
+
+for (let i = 0; i <= 5; i++) {
+	myArray.push(i);
+
+}
+
+//перебор четных и нечетных чисел при помощи фор 
+const myArray = [];
+
+for (let i = 1; i <= 10; i += 2) {
+	myArray.push(i)
+}
+
+
+//перебор нечетных чисел в обратном порядке 
+
+const myArray = [];
+for (let i = 9; i > 0; i -= 2) {
+	myArray.push(i)
+}
+
+//здесь вложенность массивов, но мне не ясно каким образом мы используем продакт, и как оно делает произведение внутри подмасливав
+function multiplyAll(arr) {
+	let product = 1;
+	// Only change code below this line
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j < arr[i].length; j++) {
+			product = product * arr[i][j];
+		}
+	}
+	// Only change code above this line
+	return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+
+//do while
+
+// Setup
+const myArray = [];
+let i = 10;
+
+// Only change code below this line
+do {
+	myArray.push(i);
+	i++;
+} while (i < 5)
+
