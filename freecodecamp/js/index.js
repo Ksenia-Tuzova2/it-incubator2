@@ -1111,3 +1111,19 @@ function checkEqual(a, b) {
 }
 
 checkEqual(1, 2);
+
+//преобразование строки в целое число 
+
+function convertToInteger(str) {
+	return parseInt(str)
+}
+
+convertToInteger("56");
+
+//преобразование числа в двоичное - не очень понимаю как это работает
+
+function convertToInteger(str) {
+	return parseInt(str, 2);
+}
+
+convertToInteger("10011");
