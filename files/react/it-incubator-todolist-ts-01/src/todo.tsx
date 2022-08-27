@@ -1,25 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Filter,Money } from './App';
 
 type Props = {
-    Store: { id: number; task: string; checked: boolean; }[]
+    Store: { id: string; task: string; checked: boolean; }[]
     removeItem: Function;
     changeFilter: (newFilter: Filter) => void
     filterMoney: (money: Money)=>void
-// y
+    addItem: (task: string)=>void
 }
-
 
 
 export function Todo(props: Props) {
     // debugger
+
+    let [inputValue, setInputValue] = useState('')
     return (
         <div >
             <div>
                 <h3>{props.Store[0].task}</h3>
                 <div>
-                    <input />
-                    <button>+</button>
+                    <input value={inputValue} onChange={(e) => setInputValue(e.currentTarget.value)}/>
+                    <button onClick={() => props.addItem(inputValue)} onKeyPress={(e)=>console.log(e)}>+</button>
                 </div>
                 <ul>
                     {

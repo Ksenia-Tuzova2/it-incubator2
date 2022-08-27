@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Todo } from './todo';
+import { v1 } from 'uuid';
 
 export type Filter = 'all' |
     'active' | 'completed'
 
 export type Money = 'Dollars' | 'RUBLS'
+
 export function App() {
 
     // debugger
     let initialState = [
         {
-            id: 0,
+            id: v1(),
             task: 'lesson 1',
             checked: true,
         },
-        {
-            id: 1,
+    {
+            id: v1(),
             task: 'lesson 2',
             checked: false,
         },
         {
-            id: 2,
+            id: v1(),
             task: 'lesson 3',
             checked: false,
         },
@@ -29,7 +31,7 @@ export function App() {
 
     let [state, setState] = useState(initialState)
 
-    function removeItem(id: number) {
+    function removeItem(id: string) {
         // debugger
         let filteredTasks = state.filter((t) => {
             return t.id !== id
@@ -38,7 +40,15 @@ export function App() {
         setState(filteredTasks)
     }
 
-
+function addItem(task:string){
+    let newTask = {
+        id: v1(),
+        task: task,
+        checked: false,
+    }
+    let newTasks=[newTask,...state]
+    setState(newTasks)
+}
 
     let [filter, setFilter] = useState<Filter>('active')
     let tasksForToDoList = state
@@ -49,16 +59,6 @@ export function App() {
     if (filter === 'active') {
         tasksForToDoList = state.filter((el) => el.checked === false)
     }
-
-
-    // function filterItem(checked: boolean) {
-    //     // debugger
-    //     let filtredTasks = Store.filter((t: any) => {
-    //         return t.checked === checked
-    //     })
-    //     setStore(filtredTasks)
-    // }
-
 
     const initialMoney = [
         { banknots: 'Dollars', value: 100, number: ' a1234567890' },
@@ -87,28 +87,6 @@ export function App() {
 
     console.log(filtringMoney)
 
-    // let [moneyFilter, setMoneyFilter] = useState<Money>('Dollars')
-
-    // const filterMoney = (money: Money) => {
-    //     setMoneyFilter(money)
-    // }
-    // let moneyForFiltering=initialMoney
-
-
-    // if (moneyFilter ==='Dollars'){
-    //     moneyForFiltering = initialMoney.filter((el) => el.banknots== 'Dollars')
-    // }
-
-    // if (moneyFilter === 'RUBLS') {
-    //     moneyForFiltering = initialMoney.filter((el) => el.banknots == 'RUBLS')
-
-    // }
-    // };
-    // console.log(moneyForFiltering)
- 
-
-
-
 
     const changeFilter = (newFilter: Filter) => {
         setFilter(newFilter)
@@ -119,7 +97,7 @@ export function App() {
         <div>
 
             <Todo Store={tasksForToDoList} removeItem={removeItem} changeFilter={changeFilter} 
-            filterMoney={filterMoney}
+                filterMoney={filterMoney} addItem={addItem}
             />
         </div>
     );
