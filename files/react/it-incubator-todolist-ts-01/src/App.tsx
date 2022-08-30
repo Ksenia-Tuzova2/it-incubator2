@@ -3,14 +3,17 @@ import './App.css';
 import { Todo } from './todo';
 import { v1 } from 'uuid';
 
+
 export type Filter = 'all' |
     'active' | 'completed'
 
 export type Money = 'Dollars' | 'RUBLS'
 
+
+
 export function App() {
 
-    // debugger
+//     // debugger
     let initialState = [
         {
             id: v1(),
@@ -93,6 +96,8 @@ function addItem(task:string){
     }
 
 
+
+
     return (
         <div>
 
@@ -103,4 +108,4 @@ function addItem(task:string){
     );
 
 
-}
+        }

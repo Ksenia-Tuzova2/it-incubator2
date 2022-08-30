@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Filter,Money } from './App';
+import { FullInput } from './fullinput/fullinput';
 
 type Props = {
     Store: { id: string; task: string; checked: boolean; }[]
@@ -18,10 +19,7 @@ export function Todo(props: Props) {
         <div >
             <div>
                 <h3>{props.Store[0].task}</h3>
-                <div>
-                    <input value={inputValue} onChange={(e) => setInputValue(e.currentTarget.value)}/>
-                    <button onClick={() => props.addItem(inputValue)} onKeyPress={(e)=>console.log(e)}>+</button>
-                </div>
+               <FullInput addItem={props.addItem}/>
                 <ul>
                     {
 
