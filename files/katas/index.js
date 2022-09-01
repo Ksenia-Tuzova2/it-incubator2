@@ -19,3 +19,13 @@ function stringToArray(string) {
 	// code code code
 
 }
+
+function even_or_odd(number) {
+	if (number % 2 == 0) {
+		return "Even";
+	} else {
+		return "Odd";
+	}
+}
+
+function noSpace(x) { return x.split(' ').join('') }
